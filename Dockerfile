@@ -6,7 +6,20 @@ MAINTAINER Remon Lam <remon.lam@virtualclouds.info>
 RUN apt-get update \
  && apt-get install -y python \
                     wget \
-                    python-sense-hat \
+                    gfortran \
+                    f95 \
+                    ifort \
+                    ifc \
+                    lf95 \
+                    pgfortran \
+                    f90 \
+                    f77 \
+                    fort \
+                    efort \
+                    efc \
+                    g77 \
+                    g95 \
+                    pathf95 \
  && apt-get clean \
  && apt-get autoclean
  && pip-3.2 install pillow
