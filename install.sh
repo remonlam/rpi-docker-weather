@@ -2,7 +2,7 @@
 
 echo "deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi" >> /etc/apt/sources.list
 
-aptget update /
+apt-get update /
 apt-get install -y nano /
                 wget /
                 ssh /
@@ -23,3 +23,5 @@ wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/python3-sense-hat_2.1.0-1_armhf.deb
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/raspberrypi-bootloader_1.20151118-1_armhf.deb
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/sense-hat_1.2_all.deb
+
+dpkg -i /tmp/*
