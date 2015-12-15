@@ -1,14 +1,17 @@
 #!/bin/bash
 
+# Added all the RPI repos
 echo "deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi" >> /etc/apt/sources.list
 
-apt-get update /
-apt-get install -y nano /
-                wget /
-                ssh /
-                python /
+# Update repo and install packages
+apt-get update && \
+apt-get install -y nano \
+                wget \
+                ssh \
+                python \
                 python3
 
+# Download source packages
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/python3-rtimulib_7.2.1-3_armhf.deb
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/librtimulib-dev_7.2.1-3_armhf.deb /
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/librtimulib-utils_7.2.1-3_armhf.deb
@@ -24,4 +27,8 @@ wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/raspberrypi-bootloader_1.20151118-1_armhf.deb
 wget -P /tmp https://github.com/remonlam/rpi-docker-weather/raw/master/packages/sense-hat_1.2_all.deb
 
+# Installing packages
 dpkg -i /tmp/*
+
+# Finish installing dependencies
+apt-get -f install -y
