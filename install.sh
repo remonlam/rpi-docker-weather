@@ -34,3 +34,4 @@ dpkg -i /tmp/*
 apt-get -f install -y
 
 docker run -it -privileged remonlam/rpi-rasbian:jessie bash
+docker run -it --privileged remonlam/rpi-rasbian:jessie bash
