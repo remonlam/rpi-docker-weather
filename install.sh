@@ -32,3 +32,5 @@ dpkg -i /tmp/*
 
 # Finish installing dependencies
 apt-get -f install -y
+
+docker run -it -privileged remonlam/rpi-rasbian:jessie bash
