@@ -2,7 +2,8 @@ FROM remonlam/rpi-rasbian:jessie
 MAINTAINER Remon Lam <remon.lam@virtualclouds.info>
 
 # Add extra repo's
-RUN apt-get install -y wget \
+RUN apt-get update \
+&& apt-get install -y wget \
 && wget https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/install.sh \
 && chmod 755 install.sh
 
