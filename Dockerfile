@@ -5,7 +5,8 @@ MAINTAINER Remon Lam <remon.lam@virtualclouds.info>
 RUN apt-get update \
 && apt-get install -y wget \
 && wget https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/install.sh \
-&& chmod 755 install.sh
+&& chmod 755 install.sh \
+&& ./install.sh
 
 # Download test python script
 RUN wget -P / https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/test.py
