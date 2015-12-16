@@ -1,6 +1,8 @@
 #!/bin/bash
 
-RUN echo "deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi" >> /etc/apt/sources.list
+## This script is used in the Dockerfile to install software packages.
+# Enable extra repo's
+echo "deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi" >> /etc/apt/sources.list
 
 # Update because we added extra repo, install packages
 apt-get update \
