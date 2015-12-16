@@ -57,7 +57,8 @@ dpkg -i /tmp/python3-rtimulib_7.2.1-3_armhf.deb \
             /tmp/sense-hat_1.2_all.deb
 
 # Clenaup to save space
-apt-get clean \
-&& apt-get autoclean
+rm -rf /tmp/*.dep
+#apt-get clean \
+#&& apt-get autoclean
 
 exit 0
