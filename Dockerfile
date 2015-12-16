@@ -55,10 +55,38 @@ RUN dpkg -i /tmp/python3-rtimulib_7.2.1-3_armhf.deb \
             /tmp/raspberrypi-bootloader_1.20151118-1_armhf.deb \
             /tmp/sense-hat_1.2_all.deb
 
+            ## ## ##                  ## ## ##
+            ######## WORKS UNTIL HERE ########
+            ## ## ##                  ## ## ##
+###
+
+# Install the downloaded packages, fix dependencies, reinstalled last packages
+#RUN dpkg -i /tmp/python3-rtimulib_7.2.1-3_armhf.deb \
+#/tmp/librtimulib7_7.2.1-3_armhf.deb \
+#/tmp/python3-rtimulib_7.2.1-3_armhf.deb \
+#/tmp/librtimulib-dev_7.2.1-3_armhf.deb \
+#/tmp/librtimulib-utils_7.2.1-3_armhf.deb \
+#/tmp/librtimulib7_7.2.1-3_armhf.deb \
+#/tmp/libwebpdemux1_0.4.1-1.2_armhf.deb \
+#/tmp/libwebpmux1_0.4.1-1.2_armhf.deb \
+#apt-get install -y libjbig0 libfreetype6 libjpeg62-turbo liblcms2-2 libtiff5
+#/tmp/dpkg -i python-pil_2.6.1-2_armhf.deb \
+#/tmp/python-rtimulib_7.2.1-3_armhf.deb \
+#apt-get install libblas-common libgfortran3 libblas3 liblapack3 python-numpy
+#/tmp/python-sense-hat_2.1.0-1_armhf.deb \
+#/tmp/python3-pil_2.6.1-2_armhf.deb\
+#/tmp/python3-rtimulib_7.2.1-3_armhf.deb \
+#/tmp/apt-get install -y python3-numpy \
+#/tmp/raspberrypi-bootloader_1.20151118-1_armhf.deb \
+#/tmp/sense-hat_1.2_all.deb
+
+###
+
+#RUN apt-get -f install -y && dpkg -i /tmp/*
+
 # Clenaup to save space
-RUN apt-get clean \
- && apt-get autoclean \
- && rm -rf /tmp/*.deb
+#RUN apt-get clean \
+#&& apt-get autoclean
 
 # Download test python script
 RUN wget -P / https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/test.py
