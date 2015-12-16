@@ -9,7 +9,7 @@ RUN apt-get update \
 && ./install.sh
 
 # Download test python script
-RUN wget -P / https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/test.py
+RUN wget -P / https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/python_scripts/test.py
 
 # Make it run when container is started
 CMD ["python", "/test.py"]
