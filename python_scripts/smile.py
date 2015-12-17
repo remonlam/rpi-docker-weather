@@ -25,3 +25,5 @@ sense.set_pixel(5, 6, r, g, b)
 sense.set_pixel(6, 5, r, g, b)
 sense.set_pixel(1, 4, r, g, b)
 sense.set_pixel(6, 4, r, g, b)
+
+sense.clear()
