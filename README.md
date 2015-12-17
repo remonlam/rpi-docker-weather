@@ -4,6 +4,10 @@
 This Python based weather station runs inside a Docker container :-)
 
 
+### To build the image you're self
+wget https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/Dockerfile
+docker build -t rpi-docker-weather .
+
 ### To run the "pre-build" script just execute this line, if you run the Dockerfile make sure you change the image name
 docker run -d --privileged=true remonlam/rpi-docker-weather
 
