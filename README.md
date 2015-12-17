@@ -1,8 +1,7 @@
 #Create a Weather Station on you're Raspberry Pi with the Sense-Hat.
 ![Raspberry Pi Sense-Hat](/images/pi_sense-hat_docker_python.png)
 
-This Python based weather station runs inside a Docker container :-)
-
+This Python based weather station runs inside a Docker container, sounds cool right :-)
 
 ### To build the Docker image yourself
 wget https://raw.githubusercontent.com/remonlam/rpi-docker-weather/master/Dockerfile
